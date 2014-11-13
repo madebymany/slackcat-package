@@ -1,5 +1,5 @@
 software_groups: &software
-  - "base"
+  - "base_trusty"
 
 packages:
   branch_codenames:
@@ -9,7 +9,7 @@ packages:
 jobs:
   slackcat:
     builder: "make"
-    base: "ubuntu:12.04"
+    base: "ubuntu:14.04"
     software_groups: *software
     build_depends:
       - "golang"
