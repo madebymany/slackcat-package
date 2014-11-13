@@ -1,0 +1,23 @@
+software_groups: &software
+  - "base"
+
+packages:
+  branch_codenames:
+    master: unstable
+    production: stable
+
+jobs:
+  slackcat:
+    builder: "make"
+    base: "ubuntu:12.04"
+    software_groups: *software
+    # build_depends:
+      # - "elasticsearch-runit=0.90.13-4"
+    promote_through:
+      - unstable
+      - stable
+    packages:
+      - name: slackcat
+        repos:
+          - test
+        target: install
