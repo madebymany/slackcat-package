@@ -1,9 +1,9 @@
-GOPATH:=$(GOPATH):`pwd`
+GOPATH:=`pwd`
 
-.PHONY: default all
+.PHONY: default all install
 
 all:
 	GOPATH=$(GOPATH) go get github.com/paulhammond/slackcat
 
 install:
-	mv bin/slackcat /usr/bin
+	mv $(GOPATH)/bin/slackcat /usr/bin
