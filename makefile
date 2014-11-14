@@ -6,3 +6,4 @@ all:
 	GOPATH=$(GOPATH) go get github.com/paulhammond/slackcat
 
 install:
+	mv bin/slackcat /usr/bin
