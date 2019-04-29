@@ -1,15 +1,15 @@
 software_groups: &software
-  - "base_trusty"
+  - "base_bionic"
 
 packages:
   branch_codenames:
-    master: unstable
-    production: stable
+    master: bionic-unstable
+    production: bionic-stable
 
 jobs:
   slackcat:
     builder: "make"
-    base: "ubuntu:14.04"
+    base: "quay.io/madebymany/build-bases:bionic"
     software_groups: *software
     build_depends:
       - "golang"
