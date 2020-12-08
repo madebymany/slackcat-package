@@ -1,15 +1,15 @@
 software_groups: &software
-  - "base_bionic"
+  - "base_focal"
 
 packages:
   branch_codenames:
-    master: bionic-unstable
-    production: bionic-stable
+    master: focal-unstable
+    production: focal-stable
 
 jobs:
   slackcat:
     builder: "make"
-    base: "quay.io/madebymany/build-bases:bionic"
+    base: "quay.io/madebymany/build-bases:focal"
     software_groups: *software
     build_depends:
       - "golang"
